@@ -193,6 +193,14 @@
                     {
                         "datatype": "string",
                         "name": "Family"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Contributor_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "IDS_Language_ID"
                     }
                 ],
                 "primaryKey": [

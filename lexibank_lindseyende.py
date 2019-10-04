@@ -1,7 +1,7 @@
 import attr
 from clldutils.path import Path
 from pylexibank.dataset import Dataset as BaseDataset
-from pylexibank.dataset import Lexeme
+from pylexibank.dataset import Lexeme, Language
 
 
 @attr.s
@@ -9,6 +9,11 @@ class IDSLexeme(Lexeme):
     Transcription = attr.ib(default=None)
     AlternativeValue = attr.ib(default=None)
     AlternativeTranscription = attr.ib(default=None)
+
+@attr.s
+class IDSLanguage(Language):
+    Contributor_ID = attr.ib(default=None)
+    IDS_Language_ID = attr.ib(default=None)
 
 class IDSEntry:
     def __init__(self, ids_id, form, alt_form, comment):
@@ -22,11 +27,17 @@ class Dataset(BaseDataset):
     id = "lindseyende"
 
     lexeme_class = IDSLexeme
+    language_class = IDSLanguage
 
     def cmd_download(self, **kw):
         self.raw.xls2csv("ids_cl_ende_final.xlsx")
 
     def cmd_install(self, **kw):
+
+        glottocode = "ende1235"
+        lang_id = "endepapuanewguinea"
+        ids_lang_id = 841 # following IDS https://github.com/lexibank/ids/blob/master/cldf/languages.csv
+        ids_contributor_id = 841 # following IDS https://github.com/lexibank/ids/blob/master/raw/contributors.csv
 
         ccode = {
             x.attributes["ids_id"]:
@@ -38,9 +49,6 @@ class Dataset(BaseDataset):
                 for x in self.conceptlist.concepts.values()
         }
 
-        glottocode = "ende1235"
-        lang_id = "endepapuanewguinea"
-
         with self.cldf as ds:
             ds.add_sources(*self.raw.read_bib())
 
@@ -48,10 +56,11 @@ class Dataset(BaseDataset):
                 ID=lang_id,
                 Name="Ende (Papua New Guinea)",
                 Glottocode=glottocode,
-                # Latitude=-8.957653,
-                # Longitude=142.239116,
+                # Latitude=-8.957786,
+                # Longitude=142.24079900000004,
+                IDS_Language_ID=ids_lang_id,
+                Contributor_ID=ids_contributor_id,
             )
-
             for form in self.read_csv():
                 ds.add_concept(
                     ID=form.ids_id,
@@ -65,7 +74,7 @@ class Dataset(BaseDataset):
                         Parameter_ID=form.ids_id,
                         Value=form.form,
                         Comment=form.comment,
-                        Source="Lindsey2019",
+                        Source="lindsey2019",
                         Transcription="standardorth",
                         AlternativeValue=form.alt_form,
                         AlternativeTranscription="phonetic",
