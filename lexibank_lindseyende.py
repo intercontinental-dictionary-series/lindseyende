@@ -10,10 +10,6 @@ class IDSLexeme(Lexeme):
     AlternativeValue = attr.ib(default=None)
     AlternativeTranscription = attr.ib(default=None)
 
-@attr.s
-class IDSLanguage(Language):
-    Contributor_ID = attr.ib(default=None)
-    IDS_Language_ID = attr.ib(default=None)
 
 class IDSEntry:
     def __init__(self, ids_id, form, alt_form, comment):
@@ -22,12 +18,12 @@ class IDSEntry:
         self.alt_form = alt_form
         self.comment = comment
 
+
 class Dataset(BaseDataset):
     dir = Path(__file__).parent
     id = "lindseyende"
 
     lexeme_class = IDSLexeme
-    language_class = IDSLanguage
 
     def cmd_download(self, **kw):
         self.raw.xls2csv("ids_cl_ende_final.xlsx")
@@ -35,9 +31,11 @@ class Dataset(BaseDataset):
     def cmd_install(self, **kw):
 
         glottocode = "ende1235"
-        lang_id = "endepapuanewguinea"
-        ids_lang_id = 841 # following IDS https://github.com/lexibank/ids/blob/master/cldf/languages.csv
-        ids_contributor_id = 841 # following IDS https://github.com/lexibank/ids/blob/master/raw/contributors.csv
+        lang_id = glottocode
+        lang_name = "Ende (Papua New Guinea)"
+        transcription="standardorth"
+        alt_transcription="phonetic"
+        source="lindsey2019"
 
         ccode = {
             x.attributes["ids_id"]:
@@ -54,12 +52,10 @@ class Dataset(BaseDataset):
 
             ds.add_language(
                 ID=lang_id,
-                Name="Ende (Papua New Guinea)",
+                Name=lang_name,
                 Glottocode=glottocode,
                 # Latitude=-8.957786,
                 # Longitude=142.24079900000004,
-                IDS_Language_ID=ids_lang_id,
-                Contributor_ID=ids_contributor_id,
             )
             for form in self.read_csv():
                 ds.add_concept(
@@ -74,16 +70,20 @@ class Dataset(BaseDataset):
                         Parameter_ID=form.ids_id,
                         Value=form.form,
                         Comment=form.comment,
-                        Source="lindsey2019",
-                        Transcription="standardorth",
+                        Source=source,
+                        Transcription=transcription,
                         AlternativeValue=form.alt_form,
-                        AlternativeTranscription="phonetic",
+                        AlternativeTranscription=alt_transcription,
                     )
 
     def read_csv(self, fname="ids_cl_ende_final.idsclldorg.csv"):
-        for i, row in enumerate(self.raw.read_csv(fname)):
-            row = [c.strip() for c in row[0:10]]
-            if i > 0:
-                row[0:2] = [int(float(c)) for c in row[0:2]]
-                entry = IDSEntry("%s-%s" % (row[0], row[1]), row[3], row[4], row[9])
-                yield entry
+        try:
+            for i, row in enumerate(self.raw.read_csv(fname)):
+                row = [c.strip() for c in row[0:10]]
+                if i > 0:
+                    row[0:2] = [int(float(c)) for c in row[0:2]]
+                    entry = IDSEntry("%s-%s" % (row[0], row[1]), row[3], row[4], row[9])
+                    yield entry
+        except Exception as e:
+            print(e)
+            print("Execute 'download %s' first?" % (self.id))

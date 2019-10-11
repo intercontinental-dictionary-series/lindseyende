@@ -1,4 +1,4 @@
-# Ende IDS wordlist
+# Ende (Papua New Guinea) IDS wordlist
 
 Cite the source dataset as
 

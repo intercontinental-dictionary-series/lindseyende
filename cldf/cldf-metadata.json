@@ -12,7 +12,7 @@
     "dc:license": null,
     "dc:related": null,
     "dc:source": "sources.bib",
-    "dc:title": "Ende IDS wordlist",
+    "dc:title": "Ende (Papua New Guinea) IDS wordlist",
     "rdf:ID": "lindseyende",
     "rdf:type": "http://www.w3.org/ns/dcat#Distribution",
     "dialect": {
@@ -22,8 +22,8 @@
         {
             "dc:title": "environment",
             "properties": {
-                "glottolog_version": "v4.0-42-gd617e7c6b8",
-                "concepticon_version": "v2.1.0-81-g4a3ad95"
+                "glottolog_version": "v4.0-51-gd1fd2f4521",
+                "concepticon_version": "v2.1.0-83-g48aed50"
             }
         }
     ],
@@ -193,14 +193,6 @@
                     {
                         "datatype": "string",
                         "name": "Family"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Contributor_ID"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "IDS_Language_ID"
                     }
                 ],
                 "primaryKey": [
