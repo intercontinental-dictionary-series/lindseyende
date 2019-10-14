@@ -11,6 +11,15 @@ class IDSLexeme(Lexeme):
     AlternativeTranscription = attr.ib(default=None)
 
 
+@attr.s
+class IDSLanguage(Language):
+    Contributors = attr.ib(default=None)
+    default_representation = attr.ib(default=None)
+    alt_representation = attr.ib(default=None)
+    alt_names = attr.ib(default=None)
+    date = attr.ib(default=None)
+
+
 class IDSEntry:
     def __init__(self, ids_id, form, alt_form, comment):
         self.ids_id = ids_id
@@ -24,6 +33,7 @@ class Dataset(BaseDataset):
     id = "lindseyende"
 
     lexeme_class = IDSLexeme
+    language_class = IDSLanguage
 
     def cmd_download(self, **kw):
         self.raw.xls2csv("ids_cl_ende_final.xlsx")
@@ -33,8 +43,8 @@ class Dataset(BaseDataset):
         glottocode = "ende1235"
         lang_id = glottocode
         lang_name = "Ende (Papua New Guinea)"
-        transcription="standardorth"
-        alt_transcription="phonetic"
+        transcription="StandardOrth"
+        alt_transcription="Phonetic"
         source="lindsey2019"
 
         ccode = {
@@ -54,9 +64,14 @@ class Dataset(BaseDataset):
                 ID=lang_id,
                 Name=lang_name,
                 Glottocode=glottocode,
-                # Latitude=-8.957786,
-                # Longitude=142.24079900000004,
+                Contributors=['Kate Lynn Lindsey|Author','Kate Lynn Lindsey|Data Entry','Bernard Comrie|Consultant'],
+                default_representation=transcription,
+                alt_representation=alt_transcription,
+                date='2019-10-14',
             )
+            ds.objects['LanguageTable'][-1]['Latitude'] = -8.957786
+            ds.objects['LanguageTable'][-1]['Longitude'] = 142.24079900000004
+
             for form in self.read_csv():
                 ds.add_concept(
                     ID=form.ids_id,
@@ -75,6 +90,9 @@ class Dataset(BaseDataset):
                         AlternativeValue=form.alt_form,
                         AlternativeTranscription=alt_transcription,
                     )
+
+            ds.wl['LanguageTable', 'Contributors'].separator = ";"
+            ds.wl['LanguageTable', 'alt_names'].separator = ";"
 
     def read_csv(self, fname="ids_cl_ende_final.idsclldorg.csv"):
         try:
