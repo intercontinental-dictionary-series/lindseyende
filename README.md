@@ -1,14 +1,9 @@
 # Ende (Papua New Guinea) IDS wordlist
 
-Cite the source dataset as
-
-> 
 
 Conceptlists in Concepticon:
-- [Key-2016-1310](http://concepticon.clld.org/contributions/Key-2016-1310)
-
+- [Key-2016-1310](https://concepticon.clld.org/contributions/Key-2016-1310)
 ## Statistics
-
 
 
 ![Glottolog: 100%](https://img.shields.io/badge/Glottolog-100%25-brightgreen.svg "Glottolog: 100%")
@@ -26,3 +21,12 @@ Conceptlists in Concepticon:
 - **Tokens:** 6,484
 - **Segments:** 27 (0 BIPA errors, 0 CTLS sound class errors, 27 CLTS modified)
 - **Inventory size (avg):** 27.00
+
+# Contributors
+
+Name               | GitHub user     | Description                          | Role
+---                | ---             | ---                                  | ---
+Kate Lynn Lindsey |  | author, data entry | Author
+Bernard Comrie |  | consultant | Creator
+Hans-Jörg Bibiko | @Bibiko | patron, code | Maintainer
+

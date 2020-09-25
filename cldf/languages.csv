@@ -1,2 +1,2 @@
-ID,Name,Glottocode,Glottolog_Name,ISO639P3code,Macroarea,Latitude,Longitude,Family,Contributors,default_representation,alt_representation,alt_names,date
-ende1235,Ende (Papua New Guinea),ende1235,,,,-8.957786,142.24079900000004,,Kate Lynn Lindsey|Author;Kate Lynn Lindsey|Data Entry;Bernard Comrie|Consultant,StandardOrth,Phonetic,,2019-10-14
+ID,Name,Glottocode,Glottolog_Name,ISO639P3code,Macroarea,Latitude,Longitude,Family,Authors,DataEntry,Consultants,Representations,alt_names,date
+ende1235,,ende1235,Ende (Papua New Guinea),,Papunesia,-8.957786,142.240799,Pahoturi,Kate Lynn Lindsey,Kate Lynn Lindsey,Bernard Comrie,StandardOrth;Phonetic,,2019-10-14
