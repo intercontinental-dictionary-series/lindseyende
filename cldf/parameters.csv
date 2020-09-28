@@ -28,7 +28,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 1-352,tide,891,TIDE
 1-353,lowtide,1026,LOW TIDE
 1-354,hightide,613,HIGH TIDE
-1-360,"river, stream, brook",666,RIVER
+1-360,"river, stream, brook",3311,FLOWING BODY OF WATER
 1-362,whirlpool,1982,WHIRLPOOL
 1-370,"spring, well",2144,SPRING OR WELL
 1-380,swamp,1145,SWAMP
@@ -105,8 +105,8 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 2-471,old woman,907,OLD WOMAN
 2-480,grandson,1618,GRANDSON
 2-490,granddaughter,1619,GRANDDAUGHTER
-2-511,mother's brother,1984,MOTHER'S BROTHER
-2-512,father's brother,1985,FATHER'S BROTHER
+2-511,mother's brother,2692,MATERNAL UNCLE (MOTHER'S BROTHER)
+2-512,father's brother,1985,PATERNAL UNCLE (FATHER'S BROTHER)
 2-520,aunt,1272,AUNT
 2-530,nephew,1063,NEPHEW
 2-540,niece,1642,NIECE
@@ -139,7 +139,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 3-120,male (adj),2263,MALE (OF ANIMAL)
 3-130,female (adj),2262,FEMALE (OF ANIMAL)
 3-150,livestock,631,LIVESTOCK
-3-320,boar,1348,BOAR
+3-320,boar,1348,BOAR (MALE PIG)
 3-340,sow (2),1351,SOW (FEMALE PIG)
 3-350,pig,1337,PIG
 3-520,"cock, rooster",1511,ROOSTER
@@ -291,7 +291,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 4-630,wake up,1602,WAKE UP
 4-650,urinate,592,PISS
 4-660,defecate,676,SHIT (DEFECATE)
-4-670,have sexual intercourse,1785,HAVE SEX
+4-670,have sexual intercourse,549,COPULATE
 4-680,shiver,52,SHIVER
 4-690,bathe,138,BATHE
 4-710,beget (of father),1152,BEGET
@@ -353,7 +353,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 5-230,"roast, fry",2146,ROAST OR FRY
 5-240,bake,183,BAKE
 5-250,oven,1143,OVEN
-5-260,"pot, cooking vessel",1462,POT
+5-260,"pot, cooking vessel",3653,COOKING POT
 5-270,kettle,854,KETTLE
 5-280,pan,31,PAN
 5-310,dish,481,DISH
@@ -489,7 +489,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 8-560,leaf,628,LEAF
 8-570,flower,239,FLOWER
 8-600,tree,906,TREE
-8-670,vine,343,VINE
+8-670,vine,3769,GRAPEVINE
 8-680,tobacco,974,TOBACCO
 8-690,smoke (tobacco),1689,SMOKE (INHALE)
 8-691,pipe,1124,PIPE

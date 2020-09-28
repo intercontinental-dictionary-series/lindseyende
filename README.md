@@ -1,14 +1,15 @@
-# Ende (Papua New Guinea) IDS wordlist
+# Ende (Papua New Guinea) IDS wordlist by Kate Lynn Lindsey and Bernard Comrie
 
 Cite the source dataset as
 
-> 
+> Kate Lynn Lindsey and Bernard Comrie. 2020. Ende (Papua New Guinea) dictionary. In: Key, Mary Ritchie & Comrie, Bernard (eds.) The Intercontinental Dictionary Series. Leipzig: Max Planck Institute for Evolutionary Anthropology. (Available online at http://ids.clld.org/)
+
+This dataset is licensed under a CC-BY-4.0 license
+
 
 Conceptlists in Concepticon:
-- [Key-2016-1310](http://concepticon.clld.org/contributions/Key-2016-1310)
-
+- [Key-2016-1310](https://concepticon.clld.org/contributions/Key-2016-1310)
 ## Statistics
-
 
 
 ![Glottolog: 100%](https://img.shields.io/badge/Glottolog-100%25-brightgreen.svg "Glottolog: 100%")
@@ -26,3 +27,12 @@ Conceptlists in Concepticon:
 - **Tokens:** 6,484
 - **Segments:** 27 (0 BIPA errors, 0 CTLS sound class errors, 27 CLTS modified)
 - **Inventory size (avg):** 27.00
+
+# Contributors
+
+Name               | GitHub user     | Description                          | Role
+---                | ---             | ---                                  | ---
+Kate Lynn Lindsey |  | author, data entry | Author
+Bernard Comrie |  | consultant | Creator
+Hans-Jörg Bibiko | @Bibiko | patron, code | Maintainer
+
