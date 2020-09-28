@@ -22,6 +22,7 @@ class Dataset(IDSDataset):
 
         args.writer.add_language(
             ID=glottocode,
+            Name='Ende (Papua New Guinea)',
             Glottocode=glottocode,
             Authors=personnel['author'],
             DataEntry=personnel['data entry'],
