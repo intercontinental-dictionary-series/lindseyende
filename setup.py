@@ -21,6 +21,7 @@ setup(
         ]
     },
     install_requires=[
+        'idspy>=0.2',
         'pylexibank>=1.1.1',
         'pycldf',
     ],
