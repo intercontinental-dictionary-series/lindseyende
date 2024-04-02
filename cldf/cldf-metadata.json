@@ -1,7 +1,7 @@
 {
     "@context": "http://www.w3.org/ns/csvw",
     "aboutUrl": null,
-    "dc:bibliographicCitation": "Kate Lynn Lindsey and Bernard Comrie. 2020. Ende (Papua New Guinea) dictionary. In: Key, Mary Ritchie & Comrie, Bernard (eds.) The Intercontinental Dictionary Series. Leipzig: Max Planck Institute for Evolutionary Anthropology. (Available online at http://ids.clld.org/)",
+    "dc:bibliographicCitation": "Kate Lynn Lindsey. 2020. Ende (Papua New Guinea) dictionary. In: Key, Mary Ritchie & Comrie, Bernard (eds.) The Intercontinental Dictionary Series. Leipzig: Max Planck Institute for Evolutionary Anthropology. (Available online at https://ids.clld.org/)",
     "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Wordlist",
     "dc:format": [
         "http://concepticon.clld.org/contributions/Key-2016-1310"
@@ -10,13 +10,13 @@
     "dc:license": "https://creativecommons.org/licenses/by/4.0/",
     "dc:related": null,
     "dc:source": "sources.bib",
-    "dc:title": "Ende (Papua New Guinea) IDS wordlist by Kate Lynn Lindsey and Bernard Comrie",
+    "dc:title": "Ende (Papua New Guinea) IDS wordlist by Kate Lynn Lindsey",
     "dcat:accessURL": "https://github.com/intercontinental-dictionary-series/lindseyende",
     "prov:wasDerivedFrom": [
         {
             "rdf:about": "https://github.com/intercontinental-dictionary-series/lindseyende",
             "rdf:type": "prov:Entity",
-            "dc:created": "v2.0",
+            "dc:created": "v2.0-4-g4b57167",
             "dc:title": "Repository"
         },
         {
