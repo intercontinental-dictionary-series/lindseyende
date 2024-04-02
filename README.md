@@ -34,7 +34,7 @@ Conceptlists in Concepticon:
 - **Synonymy:** 1.00
 - **Invalid lexemes:** 0
 - **Tokens:** 6,368
-- **Segments:** 30 (0 BIPA errors, 0 CTLS sound class errors, 30 CLTS modified)
+- **Segments:** 30 (0 BIPA errors, 0 CLTS sound class errors, 30 CLTS modified)
 - **Inventory size (avg):** 30.00
 
 # Contributors
@@ -42,7 +42,6 @@ Conceptlists in Concepticon:
 Name               | GitHub user     | Description                          | Role
 ---                | ---             | ---                                  | ---
 Kate Lynn Lindsey |  | author, data entry | Author
-Bernard Comrie |  | consultant | Creator
 Hans-Jörg Bibiko | @Bibiko | patron, code | Maintainer
 
 
